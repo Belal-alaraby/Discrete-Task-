@@ -1,37 +1,27 @@
-﻿namespace Project_1
+﻿namespace Project_2
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
-            Console.WriteLine(" Entre the First limit ");
-            int n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("ente the 1st number");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("ente the 2nd number");
+            int y = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(" Entre the Last limit ");
-            int n2 = int.Parse(Console.ReadLine());
 
-            int sum = 0;
-
-            for (int i = n1; i <= n2; i++)
+            for (int i = x; i <= y; i++)
             {
-               for (int x = 1; x <= n2; x++)
+                int sum = 0;
+                for (int n = 1; n < i; n++)
                 {
-                    if (i % x == 0)
-
-                        sum++;
+                    if (i % n == 0)
+                        sum = sum + n;
                 }
+                if (sum == i)
 
-               if (sum == 2)
-                {
                     Console.WriteLine(i);
-                    sum = 0;
-                }
-               else
-                {
-                    sum = 0;
-                }
-                    
-               
             }
         }
     }
